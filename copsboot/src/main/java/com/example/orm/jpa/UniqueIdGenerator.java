@@ -14,6 +14,10 @@ public class UniqueIdGenerator<T> {
     }
 
     private Class<?> getType() {
-        return UUID.class; // Aquí puedes extender a más tipos si en el futuro quieres otros IDs
+        return UUID.class;
+    }
+
+    public T getNextUniqueId() {
+        return (T) UUID.randomUUID();
     }
 }

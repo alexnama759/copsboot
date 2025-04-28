@@ -1,6 +1,6 @@
 package com.example.orm.jpa;
 
-import com.example.orm.jpa.ArtifactForFrameWork;
+import com.example.copsboot.util.ArtifactForFramework;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.MappedSuperclass;
 import java.util.Objects;
@@ -8,7 +8,8 @@ import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 @MappedSuperclass
-public abstract class AbstractEntity<T extends EntityId> implements Entity<T> {
+public abstract class AbstractEntity <T extends EntityId> implements Entity<T> {
+
     @EmbeddedId
     private T id;
 
