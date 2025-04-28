@@ -5,7 +5,7 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private final UserRepository repository;
+    private static UserRepository repository = null;
     public UserService(UserRepository repository) {
         this.repository = repository;
     }

@@ -60,6 +60,6 @@ public class UserRestControllerDocumentation {
                 .andExpect(status().isUnauthorized())
                 .andDo(document("own-details-unauthorized"));
     }
-    
+
 
 }
