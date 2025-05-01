@@ -4,8 +4,8 @@ import com.example.orm.jpa.AbstractEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "copsboot_user")
@@ -21,7 +21,7 @@ public class User extends AbstractEntity<UserId> {
     private Set<UserRole> roles;
 
 
-    protected User() {
+    protected User(UserId id, String mail, String s, HashSet<UserRole> roles) {
 
     }
 

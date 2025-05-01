@@ -2,12 +2,12 @@ version: '3'
 
 services:
   db:
-    image: 'postgres:16.0'
+    image: 'mysql:8.0'
     ports:
-      - 5432:5432
+      - 3306:3306
     environment:
-      POSTGRES_PASSWORD: my-postgres-db-pwd
-      POSTGRES_DB: copsboot
+      MYSQL_ROOT_PASSWORD: my-mysql-db-pwd
+      MYSQL_DATABASE: copsbootdb
 
   identity:
     image: 'quay.io/keycloak/keycloak:22.0.1'
